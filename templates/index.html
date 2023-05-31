@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Link Shortner</title>
+  <style>
+    /* CSS styling for the form */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: #4f0505;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    footer {
+        background-color: rgb(11, 0, 9);
+        color: #fcf7f7;
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 10px;
+    }
+    form {
+      margin: 20px auto;
+      width: 300px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    input[type="submit"] {
+      width: 108%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Link Shortner</h1>
+  </header>
+
+  <form action='/' method="POST">
+    <input type="text" name="url" placeholder="Enter url to be shorted........">
+    <input type="submit" value="Submit">
+  </form>
+
+  <div class="result">
+    {% if url %}
+    <h2> Shorted_URL : {{url}}</h2>
+    {% endif %}
+
+  <footer>
+    <p>© 2023. All rights reserved.</p>
+  </footer>
+</body>
+</html>
