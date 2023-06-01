@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Link Shortner</title>
+  <title>Link Shortener</title>
   <style>
     /* CSS styling for the form */
     body {
       font-family: Arial, sans-serif;
     }
     header {
-      background-color: #4f0505;
+      background-color: slateblue;
       color: #fff;
       padding: 10px;
       text-align: center;
     }
     footer {
-        background-color: rgb(11, 0, 9);
+        background-color: steelblue;
         color: #fcf7f7;
         padding: 10px;
         text-align: center;
@@ -41,15 +41,48 @@
       border: none;
       cursor: pointer;
     }
-    h2 {
+    h1, h2, h3, p {
       text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: right;
+    }
+    
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Link Shortner</h1>
+    <div class="company-name">URL SHORTENER</div>
+    <nav>
+      <ul>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#contact">Contact us</a>
+        </li>
+      </ul>
+    </nav>
   </header>
+  <br/><br/>
+  <h1>URL Shortener</h1>
+  </header>
+  <br/>
 
   <form action='/' method="POST">
     <input type="text" name="url" placeholder="Enter url to be shorted........">
@@ -58,9 +91,16 @@
 
   <div class="result">
     {% if url %}
-    <h2> Shorted_URL : {{url}}</h2>
+    <br/><br/><br/>
+    <h2> Shorted_url : {{url}}</h2>
     {% endif %}
 
+    <br/><br/>
+    <div id="contact">
+      <h3>Contact_us</h3>
+      <p>Phone: 962-195-7806</p>
+      <p>E-mail: info.samarthygkp@gmail.com</p>
+    </div>
   <footer>
     <p>© 2023. All rights reserved.</p>
   </footer>
